@@ -376,7 +376,7 @@ public:
 };
 
 void sendState(const AC& ac) {
-  httplib::Client cli("10.0.0.83");
+  httplib::Client cli("192.168.0.66");
   cli.set_connection_timeout(30);
   auto res = cli.Post("/send/", ac.getState(), "text/plain");
 }
@@ -412,7 +412,7 @@ int main() {
 
   });
 
-  server.listen("10.0.0.81", 80);
+  server.listen("192.168.0.33", 80);
 
   return 0;
 }
