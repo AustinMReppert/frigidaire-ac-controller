@@ -387,8 +387,6 @@ int main() {
   ac.setFanMode(FanMode::HIGH);
   sendState(ac);
 
-  return 0;
-
   httplib::Server server;
 
   server.Get("/api/listen-temps", [&](const httplib::Request &request, httplib::Response &res) {
